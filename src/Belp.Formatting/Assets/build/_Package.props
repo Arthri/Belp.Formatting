@@ -1,7 +1,7 @@
 <Project>
 
   <ItemGroup>
-    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/*.globalconfig" />
+    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/Belp.globalconfig" />
   </ItemGroup>
 
   <Import Project="$(MSBuildThisFileDirectory)HideContentFiles.props" />

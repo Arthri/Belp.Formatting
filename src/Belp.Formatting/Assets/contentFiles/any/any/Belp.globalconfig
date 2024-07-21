@@ -618,6 +618,9 @@ csharp_preserve_single_line_blocks = true
 
 
 #§ Naming Rules
+stylecop.naming.allowCommonHungarianPrefixes = true
+stylecop.naming.includeInferredTupleElementNames = true
+stylecop.naming.tupleElementNameCasing = pascalCase
 
 #¶ Default
 dotnet_naming_symbols.all.applicable_kinds = *
@@ -866,6 +869,7 @@ dotnet_diagnostic.SA1028.severity = warning
 
 
 #§ Readability Rules
+stylecop.readability.allowBuiltInTypeAliases = true
 
 #: A call to a member from an inherited class begins with `base.`, and the local class does not contain an override or implementation of the member.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1100.md
@@ -1292,6 +1296,8 @@ dotnet_diagnostic.SA1414.severity = warning
 
 
 #§ Layout Rules
+stylecop.layout.allowConsecutiveUsings = true
+stylecop.layout.allowDoWhileOnClosingBrace = false
 
 #: The opening or closing brace within a C# statement, element, or expression is not placed on its own line.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1500.md
