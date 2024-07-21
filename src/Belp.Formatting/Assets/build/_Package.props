@@ -1,7 +1,7 @@
 <Project>
 
   <ItemGroup>
-    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/Belp.globalconfig" />
+    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/*.globalconfig" />
   </ItemGroup>
 
 </Project>
