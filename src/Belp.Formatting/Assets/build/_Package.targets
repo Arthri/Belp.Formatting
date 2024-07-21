@@ -1,0 +1,7 @@
+<Project>
+
+  <PropertyGroup>
+    <AnalysisLevel Condition="'$(AnalysisLevel)' == ''">latest-all</AnalysisLevel>
+  </PropertyGroup>
+
+</Project>

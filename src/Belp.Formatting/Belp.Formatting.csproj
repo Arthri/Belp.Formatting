@@ -1,0 +1,32 @@
+﻿<Project Sdk="Belp.SDK.PackOnly/0.6.0">
+
+  <!-- Package Information -->
+  <PropertyGroup>
+    <AddMetapackagePlaceholderLibrary>true</AddMetapackagePlaceholderLibrary>
+    <Description>An unofficial bundle of formatting tools that strives for closeness to conventional C#.</Description>
+    <DevelopmentDependency>true</DevelopmentDependency>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Arthri/Belp.Formatting/</PackageProjectUrl>
+    <PackageTags>format;style;analyzer;stylecop;roslynator;editorconfig;roslyn</PackageTags>
+    <Product>Belp</Product>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <Title>Belp Formatting</Title>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <CopyrightOwner Include="Arthri" Years="2024" />
+  </ItemGroup>
+
+
+
+  <!-- Dependencies -->
+  <ItemGroup>
+    <PackageReference Include="IDisposableAnalyzers" Version="4.0.7" />
+    <PackageReference Include="Roslynator.Analyzers" Version="4.12.3" />
+    <PackageReference Include="Roslynator.CodeFixes" Version="4.12.3" />
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.12.3" />
+    <PackageReference Include="Roslynator.Refactorings" Version="4.12.3" />
+    <PackageReference Include="StyleCop.Analyzers.Unstable" Version="1.2.0.556" />
+  </ItemGroup>
+
+</Project>

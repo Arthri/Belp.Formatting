@@ -1,0 +1,8 @@
+<Project>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/stylecop.json" Link="stylecop.json" />
+    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/Belp.globalconfig" />
+  </ItemGroup>
+
+</Project>
