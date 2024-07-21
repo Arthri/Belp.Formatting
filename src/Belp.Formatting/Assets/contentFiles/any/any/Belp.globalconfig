@@ -3071,7 +3071,8 @@ dotnet_diagnostic.CA1200.severity = warning
 
 #: Do not pass literals as localized parameters
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1303
-dotnet_diagnostic.CA1303.severity = warning
+#! Situational
+dotnet_diagnostic.CA1303.severity = none
 
 #: Specify CultureInfo
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1304
