@@ -29,4 +29,36 @@
     <PackageReference Include="StyleCop.Analyzers.Unstable" Version="1.2.0.556" />
   </ItemGroup>
 
+
+
+  <!-- Hide packed content files -->
+  <PropertyGroup>
+    <BeforePack>$(BeforePack);_GenerateHideContentFiles</BeforePack>
+  </PropertyGroup>
+
+  <Target Name="_GenerateHideContentFiles">
+    <PropertyGroup>
+      <_HideContentsFilePath>$(IntermediateOutputPath)HideContentFiles.props</_HideContentsFilePath>
+      <_HideContentsFileContent>
+<![CDATA[<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup>
+    <!-- Hide packed content files from project tree -->
+    <Compile Update="@%28Compile)">
+      <Visible Condition="'%%28Compile.NuGetPackageId)' == '$(PackageId)'">false</Visible>
+      <Link>$(PackageId)\%%28Filename)%%28Extension)</Link>
+    </Compile>
+  </ItemGroup>
+
+</Project>]]>
+      </_HideContentsFileContent>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Include="$(_HideContentsFilePath)" Pack="true" PackagePath="\build\" />
+    </ItemGroup>
+
+    <WriteLinesToFile File="$(_HideContentsFilePath)" Lines="$(_HideContentsFileContent)" Overwrite="true" WriteOnlyWhenDifferent="true" />
+  </Target>
+
 </Project>

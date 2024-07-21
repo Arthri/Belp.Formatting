@@ -4,4 +4,6 @@
     <EditorConfigFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/*.globalconfig" />
   </ItemGroup>
 
+  <Import Project="$(MSBuildThisFileDirectory)HideContentFiles.props" />
+
 </Project>
