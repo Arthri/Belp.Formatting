@@ -1,0 +1,13 @@
+# Target C# files
+[*.cs]
+
+# Core EditorConfig Options
+indent_style = space
+indent_size = 4
+tab_width = 4
+end_of_line = lf
+charset = utf-8-bom
+trim_trailing_whitespace = true
+insert_final_newline = true
+#// Remove the line below if you want to inherit .editorconfig settings from higher directories
+root = true
