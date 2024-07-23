@@ -2016,7 +2016,8 @@ dotnet_diagnostic.RCS1042.severity = warning
 
 #: Remove 'partial' modifier from type with a single part
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS1043
-dotnet_diagnostic.RCS1043.severity = warning
+#! Situational
+dotnet_diagnostic.RCS1043.severity = none
 
 #: Remove original exception from throw statement
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS1044
