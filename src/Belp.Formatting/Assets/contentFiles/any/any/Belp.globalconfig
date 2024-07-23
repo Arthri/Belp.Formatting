@@ -2627,7 +2627,8 @@ dotnet_diagnostic.RCS1230.severity = warning
 
 #: Make parameter ref read-only
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS1231
-dotnet_diagnostic.RCS1231.severity = warning
+#! Situational
+dotnet_diagnostic.RCS1231.severity = none
 
 #: Order elements in documentation comment
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS1232
