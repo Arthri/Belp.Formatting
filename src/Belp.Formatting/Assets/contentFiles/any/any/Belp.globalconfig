@@ -2939,8 +2939,9 @@ dotnet_diagnostic.CA1031.severity = none
 dotnet_diagnostic.CA1032.severity = warning
 
 #: Interface methods should be callable by child types
-#> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1033
-dotnet_diagnostic.CA1033.severity = warning
+#> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/
+#? Subjective: Explicit interface implementations are used because the member was intended to be hidden.
+dotnet_diagnostic.CA1033.severity = none
 
 #: Nested types should not be visible
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1034
