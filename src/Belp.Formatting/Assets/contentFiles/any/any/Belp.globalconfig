@@ -2965,7 +2965,8 @@ dotnet_code_quality.CA1041.api_surface = all
 
 #: Use integral or string argument for indexers
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1043
-dotnet_diagnostic.CA1043.severity = warning
+#! Subjective
+dotnet_diagnostic.CA1043.severity = none
 dotnet_code_quality.CA1043.api_surface = all
 
 #: Properties should not be write only
