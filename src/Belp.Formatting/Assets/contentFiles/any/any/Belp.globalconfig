@@ -1818,7 +1818,8 @@ dotnet_diagnostic.RCS0046.severity = warning
 
 #: Put initializer on a single line
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS0048
-dotnet_diagnostic.RCS0048.severity = warning
+#? Subjective
+dotnet_diagnostic.RCS0048.severity = none
 
 #: Add blank line after top comment
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS0049
