@@ -1360,7 +1360,8 @@ dotnet_diagnostic.SA1512.severity = warning
 
 #: A closing brace within a C# element, statement, or expression is not followed by a blank line.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1513.md
-dotnet_diagnostic.SA1513.severity = warning
+#? Too broad, see RCS0008
+dotnet_diagnostic.SA1513.severity = none
 
 #: An element documentation header above a C# element is not preceded by a blank line.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1514.md
@@ -1689,6 +1690,7 @@ dotnet_diagnostic.RCS0007.severity = warning
 
 #: Add blank line between closing brace and next statement
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS0008
+#? Too broad. Prefer rules such as RCS0010
 dotnet_diagnostic.RCS0008.severity = warning
 
 #: Add blank line between declaration and documentation comment
