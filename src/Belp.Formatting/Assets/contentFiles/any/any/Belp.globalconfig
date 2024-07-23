@@ -1716,7 +1716,8 @@ dotnet_diagnostic.RCS0013.severity = warning
 
 #: Add blank line between switch sections
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS0014
-dotnet_diagnostic.RCS0014.severity = warning
+#X RCS0061
+dotnet_diagnostic.RCS0014.severity = none
 roslynator_blank_line_between_closing_brace_and_switch_section = true
 
 #: Add/remove blank line between using directives
