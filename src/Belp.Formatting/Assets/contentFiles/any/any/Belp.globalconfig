@@ -3680,7 +3680,8 @@ dotnet_diagnostic.CA2224.severity = warning
 
 #: Operator overloads have named alternates
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2225
-dotnet_diagnostic.CA2225.severity = warning
+#! Situational
+dotnet_diagnostic.CA2225.severity = none
 dotnet_code_quality.CA2225.api_surface = all
 
 #: Operators should have symmetrical overloads
