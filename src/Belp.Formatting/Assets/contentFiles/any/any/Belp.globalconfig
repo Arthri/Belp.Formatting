@@ -1216,7 +1216,8 @@ dotnet_diagnostic.SA1314.severity = none
 
 #: Element names within a tuple type should have the correct casing.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1316.md
-dotnet_diagnostic.SA1316.severity = warning
+#- Too broad: the rule does not discriminate between tuple types(usually pascal cased) and tuple deconstruction(usually camel cased)
+dotnet_diagnostic.SA1316.severity = none
 
 
 
