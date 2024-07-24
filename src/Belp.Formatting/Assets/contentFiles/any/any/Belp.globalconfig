@@ -3496,7 +3496,7 @@ dotnet_diagnostic.CA1858.severity = warning
 #: Use concrete types when possible for improved performance
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1859
 dotnet_diagnostic.CA1859.severity = warning
-dotnet_code_quality.CA1859.api_surface = all
+dotnet_code_quality.CA1859.api_surface = internal
 
 #: Avoid using 'Enumerable.Any()' extension method
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1860
