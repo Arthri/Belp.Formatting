@@ -44,10 +44,10 @@
 
   <ItemGroup>
     <!-- Hide packed content files from project tree -->
-    <Compile Update="@%28Compile)">
-      <Visible Condition="'%%28Compile.NuGetPackageId)' == '$(PackageId)'">false</Visible>
-      <Link>$(PackageId)\%%28Filename)%%28Extension)</Link>
-    </Compile>
+    <None Update="@%28None)">
+      <Visible Condition="'%%28None.NuGetPackageId)' == '$(PackageId)'">false</Visible>
+      <Link Condition="'%%28None.NuGetPackageId)' == '$(PackageId)'">$(PackageId)\%%28Filename)%%28Extension)</Link>
+    </None>
   </ItemGroup>
 
 </Project>]]>
