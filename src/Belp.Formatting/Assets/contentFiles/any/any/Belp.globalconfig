@@ -225,12 +225,14 @@ dotnet_style_readonly_field = true
 
 #: Use conditional expression for assignment
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0045
-dotnet_diagnostic.IDE0045.severity = warning
+#? Subjective. Affects guard clauses.
+dotnet_diagnostic.IDE0045.severity = none
 dotnet_style_prefer_conditional_expression_over_assignment = true
 
 #: Use conditional expression for return
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0046
-dotnet_diagnostic.IDE0046.severity = warning
+#? Subjective. Affects guard clauses.
+dotnet_diagnostic.IDE0046.severity = none
 dotnet_style_prefer_conditional_expression_over_return = true
 
 #: Parentheses preferences
