@@ -1075,7 +1075,7 @@ dotnet_diagnostic.SA1203.severity = none
 #: A static element is positioned beneath an instance element of the same type.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1204.md
 #? Situational
-dotnet_diagnostic.SA1204.severity = warning
+dotnet_diagnostic.SA1204.severity = none
 
 #: The partial element does not have an access modifier defined.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1205.md
@@ -1268,8 +1268,8 @@ dotnet_diagnostic.SA1407.severity = none
 
 #: A C# statement contains a complex conditional expression which omits parenthesis around operators.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1408.md
-#? Subjective
-dotnet_diagnostic.SA1408.severity = warning
+#? Subjective, Situational
+dotnet_diagnostic.SA1408.severity = none
 
 #: A C# file contains code which is unnecessary and can be removed without changing the overall logic of the code.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1409.md
@@ -1711,7 +1711,8 @@ roslynator_blank_line_between_single_line_accessors = true
 
 #: Add blank line between single-line declarations
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS0012
-dotnet_diagnostic.RCS0012.severity = warning
+#? Subjective
+dotnet_diagnostic.RCS0012.severity = none
 
 #: Add blank line between single-line declarations of different kind
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS0013
@@ -2271,7 +2272,8 @@ dotnet_diagnostic.RCS1133.severity = warning
 
 #: Remove redundant statement
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS1134
-dotnet_diagnostic.RCS1134.severity = warning
+#? Situational
+dotnet_diagnostic.RCS1134.severity = none
 
 #: Declare enum member with zero value (when enum has FlagsAttribute)
 #> https://josefpihrt.github.io/docs/roslynator/analyzers/RCS1135
