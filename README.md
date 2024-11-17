@@ -2,11 +2,11 @@
 An unofficial bundle of formatting tools to enforce writing C# in the most conventional manner possible.
 
 The package deviates from Microsoft's established conventions in several areas. For example,
-- `_camelCase` for private fields
+- `_camelCase` for private fields.
 - `PreEvent`/`PostEvent` or `BeforeEvent`/`AfterEvent` instead of `Eventing`/`Evented`.
 
 Furthermore, the opinion of this package on some disputed C# conventions are as follows,
-- Explicit type over var unless self-evident.
+- Explicit type over var unless evident.
     ```cs
     IEnumerable<string> x = GetNames();
     var y = (string)obj;
@@ -15,17 +15,18 @@ Furthermore, the opinion of this package on some disputed C# conventions are as 
     int b = 2;
     var c = 3L;
     ```
-- All methods must use block bodies(as opposed to expression bodies), but properties may use expression bodies.
-- All selective statements(if, switch), loop statements(while, for), and other statements which can be accompanied by curly braces must be accompanied by curly braces.
+- All methods must use block bodies, as opposed to expression bodies. However, properties may use either block bodies or expression bodies.
+- All selective statements(if, switch), loop statements(while, for), and other similar statements must be accompanied by curly braces.
     One notable exception is a series of using statements after another.
     ```cs
+    // Permitted
     using (null)
     using (null)
     using (null)
     {
     }
 
-    // Also allowed
+    // Permitted
     using (null)
     {
         using (null)
@@ -36,7 +37,7 @@ Furthermore, the opinion of this package on some disputed C# conventions are as 
         }
     }
     ```
-- No parentheses or grouping operators unless necessary.
+- No parentheses or grouping constructs unless necessary.
 - Switch case contents must be wrapped in {} and must have the break statement placed outside the curly braces if possible.
 
 ## Comment Legend
