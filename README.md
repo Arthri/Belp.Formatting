@@ -3,10 +3,6 @@ An unofficial bundle of formatting tools to enforce writing C# in the most conve
 
 The package deviates from Microsoft's established conventions in several areas. For example,
 - `_camelCase` for private fields
-
-    The BCL uses conventions such as `m_camelCase` and `t_camelCase`. The convention is not popular in modern C# and is limited to the BCL and older codebases.
-
-    Roslyn uses `this.camelCase`, which does have some usage, but isn't more popular than `_camelCase`.
 - `PreEvent`/`PostEvent` or `BeforeEvent`/`AfterEvent` instead of `Eventing`/`Evented`.
 
 Furthermore, the opinion of this package on some disputed C# conventions are as follows,
