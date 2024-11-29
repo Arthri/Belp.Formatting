@@ -38,7 +38,7 @@
 
   <Target Name="_GenerateHideContentFiles">
     <PropertyGroup>
-      <_HideContentsFilePath>$(IntermediateOutputPath)HideContentFiles.props</_HideContentsFilePath>
+      <_HideContentsFilePath>$(IntermediateOutputPath)HideContentFiles.targets</_HideContentsFilePath>
       <_HideContentsFileContent>
 <![CDATA[<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 

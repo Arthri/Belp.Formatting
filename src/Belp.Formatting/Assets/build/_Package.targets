@@ -4,4 +4,6 @@
     <AnalysisLevel Condition="'$(AnalysisLevel)' == ''">latest-all</AnalysisLevel>
   </PropertyGroup>
 
+  <Import Project="$(MSBuildThisFileDirectory)HideContentFiles.targets" />
+
 </Project>
