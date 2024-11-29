@@ -1,0 +1,21 @@
+is_global = true
+global_level = -49
+
+
+
+
+
+#§ Overrides
+
+#: Remove unnecessary expression value
+#> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0058
+#- Makes Asserts more verbose
+dotnet_diagnostic.IDE0058.severity = none
+
+#/ Asynchronous test cases should not be forced to end with async
+dotnet_naming_rule.async_naming_rule.severity = none
+
+#: Mark members as static
+#> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/
+#- Test cases commonly don't need instance data, but still need to be instance methods.
+dotnet_diagnostic.CA1822.severity = none

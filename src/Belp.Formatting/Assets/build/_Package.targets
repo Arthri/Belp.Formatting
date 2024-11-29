@@ -4,6 +4,10 @@
     <AnalysisLevel Condition="'$(AnalysisLevel)' == ''">latest-all</AnalysisLevel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Condition="@(PackageReference->AnyHaveMetadataValue('Identity', 'TUnit'))" Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/Belp.TUnit.globalconfig" />
+  </ItemGroup>
+
   <Import Project="$(MSBuildThisFileDirectory)HideContentFiles.targets" />
 
 </Project>
