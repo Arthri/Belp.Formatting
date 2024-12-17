@@ -4,4 +4,13 @@
     <EditorConfigFiles Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/Belp.globalconfig" />
   </ItemGroup>
 
+
+
+  <!-- NuGet Security Auditing -->
+  <PropertyGroup>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <NuGetAudit>true</NuGetAudit>
+  </PropertyGroup>
+
 </Project>
