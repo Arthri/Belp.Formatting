@@ -12,4 +12,13 @@
 
   <Import Project="$(MSBuildThisFileDirectory)HideContentFiles.targets" />
 
+
+
+  <!-- Remove third-party code style analyzers if code style is not enforced in build -->
+  <Target Name="_RemoveCodeStyleAnalyzers" Condition="'$(EnforceCodeStyleInBuild)' != 'true'" AfterTargets="ResolveLockFileAnalyzers">
+    <ItemGroup>
+      <Analyzer Remove="@(Analyzer)" Condition="'%(Analyzer.NuGetPackageId)' == 'StyleCop.Analyzers.Unstable' Or '%(Analyzer.NuGetPackageId)' == 'Roslynator.Formatting.Analyzers'" />
+    </ItemGroup>
+  </Target>
+
 </Project>
