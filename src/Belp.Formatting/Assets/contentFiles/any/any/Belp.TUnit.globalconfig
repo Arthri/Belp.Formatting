@@ -11,6 +11,8 @@ global_level = -49
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0058
 #- Makes Asserts more verbose
 dotnet_diagnostic.IDE0058.severity = none
+csharp_style_unused_value_expression_statement_preference = discard_variable:none
+visual_basic_style_unused_value_expression_statement_preference = unused_local_variable:none
 
 #/ Asynchronous test cases should not be forced to end with async
 dotnet_naming_rule.async_naming_rule.severity = none
