@@ -1,4 +1,4 @@
-<Project>
+<Project InitialTargets="_SuppressMissingDocumentationWarnings">
 
   <PropertyGroup>
     <AnalysisLevel Condition="'$(AnalysisLevel)' == ''">latest-all</AnalysisLevel>
@@ -7,6 +7,17 @@
   <ItemGroup>
     <EditorConfigFiles Condition="@(PackageReference->AnyHaveMetadataValue('Identity', 'TUnit'))" Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/Belp.TUnit.globalconfig" />
   </ItemGroup>
+
+  <Target Name="_SuppressMissingDocumentationWarnings">
+    <PropertyGroup>
+      <!--
+        Documentation has to be, unfortunately, enabled, because of https://github.com/dotnet/roslyn/issues/41640
+        leading to a slurry of unnecessary missing documentation warnings for test projects. Disabling them helps
+        reduce the number of unnecessary warnings.
+      -->
+      <NoWarn Condition="@(PackageReference->AnyHaveMetadataValue('Identity', 'TUnit')) And '$(SuppressMissingDocumentationWarnings)' != 'false'">$(NoWarn);CS1591</NoWarn>
+    </PropertyGroup>
+  </Target>
 
 
 
