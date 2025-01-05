@@ -17,6 +17,13 @@ visual_basic_style_unused_value_expression_statement_preference = unused_local_v
 #/ Asynchronous test cases should not be forced to end with async
 dotnet_naming_rule.async_naming_rule.severity = none
 
+#: Validate arguments of public methods
+#> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1062
+#- TUnit requires tests to be public, leading to the activation of this analyzer on all test cases.
+#  However, test assemblies aren't often used as class libraries, therefore the utility of this analyzer
+#  is minimal.
+dotnet_diagnostic.CA1062.severity = none
+
 #: Mark members as static
 #> https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/
 #- Test cases commonly don't need instance data, but still need to be instance methods.
