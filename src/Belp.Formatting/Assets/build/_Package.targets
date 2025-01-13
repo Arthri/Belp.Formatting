@@ -26,7 +26,7 @@
 
 
   <!-- Remove third-party code style analyzers if code style is not enforced in build -->
-  <Target Name="_RemoveCodeStyleAnalyzers" Condition="'$(EnforceCodeStyleInBuild)' != 'true'" AfterTargets="ResolveLockFileAnalyzers">
+  <Target Name="_RemoveCodeStyleAnalyzers" Condition="'$(EnforceCodeStyleInBuild)' != 'true' And '$(DesignTimeBuild)' != 'true' And '$(BuildingProject)' != 'false'" AfterTargets="ResolveLockFileAnalyzers">
     <ItemGroup>
       <Analyzer Remove="@(Analyzer)" Condition="'%(Analyzer.NuGetPackageId)' == 'StyleCop.Analyzers.Unstable' Or '%(Analyzer.NuGetPackageId)' == 'Roslynator.Formatting.Analyzers'" />
     </ItemGroup>
