@@ -22,10 +22,10 @@
   <!-- Dependencies -->
   <ItemGroup>
     <PackageReference Include="IDisposableAnalyzers" Version="4.0.8" />
-    <PackageReference Include="Roslynator.Analyzers" Version="4.12.10" />
-    <PackageReference Include="Roslynator.CodeFixes" Version="4.12.10" />
-    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.12.10" />
-    <PackageReference Include="Roslynator.Refactorings" Version="4.12.10" />
+    <PackageReference Include="Roslynator.Analyzers" Version="4.12.11" />
+    <PackageReference Include="Roslynator.CodeFixes" Version="4.12.11" />
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.12.11" />
+    <PackageReference Include="Roslynator.Refactorings" Version="4.12.11" />
     <PackageReference Include="StyleCop.Analyzers.Unstable" Version="1.2.0.556" />
   </ItemGroup>
 
