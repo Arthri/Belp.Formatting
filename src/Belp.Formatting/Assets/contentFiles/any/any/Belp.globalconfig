@@ -1359,7 +1359,8 @@ dotnet_diagnostic.SA1511.severity = warning
 
 #: A single-line comment within C# code is followed by a blank line.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1512.md
-dotnet_diagnostic.SA1512.severity = warning
+#? Situational
+dotnet_diagnostic.SA1512.severity = none
 
 #: A closing brace within a C# element, statement, or expression is not followed by a blank line.
 #> https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/ac00d09658078f3f4d41cbdd0e4b6d8540f0194f/documentation/SA1513.md
