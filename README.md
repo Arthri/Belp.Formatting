@@ -1,16 +1,12 @@
 # Belp.Formatting
-An unofficial bundle of formatting tools that strives for closeness to conventional C#.
+An unofficial bundle of formatting tools to enforce writing C# in the most conventional manner possible.
 
-The package attempts to enforce writing C# in the most conventional manner possible. To this end, it deviates from Microsoft's conventions in several areas. For example,
-- `_camelCase` for private fields
-
-    The BCL uses conventions such as `m_camelCase` and `t_camelCase`. The convention is not popular in modern C# and is limited to the BCL and older codebases.
-
-    Roslyn uses `this.camelCase`, which does have some usage, but isn't more popular than `_camelCase`.
+The package deviates from Microsoft's established conventions in several areas. For example,
+- `_camelCase` for private fields.
 - `PreEvent`/`PostEvent` or `BeforeEvent`/`AfterEvent` instead of `Eventing`/`Evented`.
 
-Furthermore, the stance of this package on some C# disputed conventions are as follows,
-- Explicit type over var unless self-evident.
+Furthermore, the opinion of this package on some disputed C# conventions are as follows,
+- Explicit type over var unless evident.
     ```cs
     IEnumerable<string> x = GetNames();
     var y = (string)obj;
@@ -19,18 +15,18 @@ Furthermore, the stance of this package on some C# disputed conventions are as f
     int b = 2;
     var c = 3L;
     ```
-- All methods must use block bodies(as opposed to expression bodies) without exception.
-- Properties may use expression bodies.
-- All selective statements(if, switch), loop statements(while, for), and other statements which can be accompanied by curly braces must be accompanied by curly braces.
+- All methods must use block bodies, as opposed to expression bodies. However, properties may use either block bodies or expression bodies.
+- All selective statements(if, switch), loop statements(while, for), and other similar statements must be accompanied by curly braces.
     One notable exception is a series of using statements after another.
     ```cs
+    // Permitted
     using (null)
     using (null)
     using (null)
     {
     }
 
-    // Also allowed
+    // Permitted
     using (null)
     {
         using (null)
@@ -41,7 +37,7 @@ Furthermore, the stance of this package on some C# disputed conventions are as f
         }
     }
     ```
-- No parentheses or grouping operators unless necessary.
+- No parentheses or grouping constructs unless necessary.
 - Switch case contents must be wrapped in {} and must have the break statement placed outside the curly braces if possible.
 
 ## Comment Legend

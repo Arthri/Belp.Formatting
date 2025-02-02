@@ -1,7 +1,35 @@
-<Project>
+<Project InitialTargets="_SuppressMissingDocumentationWarnings">
 
   <PropertyGroup>
     <AnalysisLevel Condition="'$(AnalysisLevel)' == ''">latest-all</AnalysisLevel>
   </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Condition="@(PackageReference->AnyHaveMetadataValue('Identity', 'TUnit'))" Include="$(MSBuildThisFileDirectory)../contentFiles/any/any/Belp.TUnit.globalconfig" />
+  </ItemGroup>
+
+  <Target Name="_SuppressMissingDocumentationWarnings">
+    <PropertyGroup>
+      <!--
+        Documentation has to be, unfortunately, enabled, because of https://github.com/dotnet/roslyn/issues/41640
+        leading to a slurry of unnecessary missing documentation warnings for test projects. Disabling them helps
+        reduce the number of unnecessary warnings.
+      -->
+      <NoWarn Condition="@(PackageReference->AnyHaveMetadataValue('Identity', 'TUnit')) And '$(SuppressMissingDocumentationWarnings)' != 'false'">$(NoWarn);CS1591</NoWarn>
+    </PropertyGroup>
+  </Target>
+
+
+
+  <Import Project="$(MSBuildThisFileDirectory)HideContentFiles.targets" />
+
+
+
+  <!-- Remove third-party code style analyzers if code style is not enforced in build -->
+  <Target Name="_RemoveCodeStyleAnalyzers" Condition="'$(EnforceCodeStyleInBuild)' != 'true' And '$(DesignTimeBuild)' != 'true' And '$(BuildingProject)' != 'false'" AfterTargets="ResolveLockFileAnalyzers">
+    <ItemGroup>
+      <Analyzer Remove="@(Analyzer)" Condition="'%(Analyzer.NuGetPackageId)' == 'StyleCop.Analyzers.Unstable' Or '%(Analyzer.NuGetPackageId)' == 'Roslynator.Formatting.Analyzers'" />
+    </ItemGroup>
+  </Target>
 
 </Project>
